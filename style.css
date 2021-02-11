@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -59,6 +63,7 @@
 }
 
 .navbar .menu li a {
+  display: block;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -77,6 +82,31 @@
   font-size: 23px;
   cursor: pointer;
   display: none;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* home section */
@@ -175,7 +205,8 @@ section {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
   font-family: "Poppins", sans-serif;
 }
 
@@ -578,6 +609,23 @@ section {
 .contact .right form .button button:hover {
   color: crimson;
   background: none;
+}
+
+/* footer */
+
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+}
+
+footer span a {
+  color: crimson;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
 }
 
 /* responzive media quary */
